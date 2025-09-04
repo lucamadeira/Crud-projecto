@@ -9,11 +9,13 @@ import fs from 'fs'
 const app = express()
 const PORT = 3000
 
-app.use('/', router)
-app.use(express.json())
-
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
+
+app.use('/', router)
+app.use(express.json())
+app.use(express.static(path.join(__dirname, 'public')));
+
 
 
 
