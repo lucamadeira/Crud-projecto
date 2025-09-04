@@ -6,5 +6,5 @@ const btdelete = document.getElementById('delete')
 
 
 btposh.addEventListener('click',()=>{
-alert('hola')
+ 
 })
