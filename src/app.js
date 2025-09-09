@@ -12,11 +12,11 @@ const PORT = 3000
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
 
-app.use('/', router)
-app.use(express.json())
-app.use(express.static(path.join(__dirname, 'public')));
 
-
+app.use(express.json()) // primero procesar JSON
+app.use(express.urlencoded({ extended: true })) // luego formularios
+app.use(express.static(path.join(__dirname, 'public'))) // archivos estáticos
+app.use('/', router) // finalmente tus rutas
 
 
 app.set('view engine', 'ejs')

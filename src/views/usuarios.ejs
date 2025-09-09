@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Usuarios</title>
+  <link rel="stylesheet" href="/css/usuarios.css">
+</head>
+<body>
+  <h1>Usuarios Registrados</h1>
+
+  <div class="container">
+    <% usuarios.forEach(usuario => { %>
+      <div class="card">
+        <p>ID: <%= usuario.id %></p>
+        <p>Email: <%= usuario.email %></p>
+        <p>Password: <%= usuario.password %></p>
+        <button class="edit-btn" data-id="<%= usuario.id %>">Editar</button>
+        <button class="delete-btn" data-id="<%= usuario.id %>">Eliminar</button>
+      </div>
+    <% }) %>
+  </div>
+
+
+  <script src="/js/usuarios.js"></script>
+</body>
+</html>

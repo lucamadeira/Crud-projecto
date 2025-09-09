@@ -1,19 +1,98 @@
-*{
- overflow: hidden;
-}
 
-#form {
-  margin: auto;
-  width: 300px;    
-  height: 400px;   
-  background-color: lightblue;
-  text-align: center;
-  padding: 20px;
-  border-radius: 8px;
-}
+    @import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;700&display=swap');
 
-input {
-  width: 80%;
-  margin: 10px 0;
-  padding: 8px;
-}
+    body {
+      font-family: 'Baloo 2', cursive;
+      background: linear-gradient(135deg, #4ecf45 0%, #1d3177 100%);
+      margin: 0;
+      padding: 0;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      animation: bgShift 15s infinite alternate;
+    }
+
+    @keyframes bgShift {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    header {
+      margin: 30px 0 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      color: #fff;
+      font-size: 2.5em;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+    }
+
+    .form-container {
+      background-color: rgba(255, 255, 255, 0.95);
+      padding: 30px 40px;
+      border-radius: 20px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+      width: 350px;
+      text-align: center;
+      transition: transform 0.3s;
+    }
+
+    .form-container:hover {
+      transform: translateY(-5px);
+    }
+
+    label {
+      display: block;
+      margin-top: 15px;
+      font-weight: bold;
+      color: #333;
+    }
+
+    input {
+      width: 100%;
+      padding: 12px;
+      margin-top: 5px;
+      border-radius: 10px;
+      border: 2px solid #ff6f61;
+      transition: all 0.3s;
+      font-size: 1em;
+      text-align: center;
+    }
+
+    input:focus {
+      border-color: #6a82fb;
+      box-shadow: 0 0 8px #6a82fb;
+      outline: none;
+    }
+
+    button {
+      width: 100%;
+      padding: 12px;
+      margin-top: 20px;
+      background: linear-gradient(45deg, #48c968, #1b3368);
+      color: white;
+      font-size: 1.1em;
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    button:hover {
+      transform: scale(1.05);
+      box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+    }
+
+    .message {
+      margin-top: 15px;
+      font-weight: bold;
+      font-size: 1em;
+      transition: all 0.3s;
+    }
+
+    .success { color: #4caf50; }
+    .error { color: #ff3d00; }
